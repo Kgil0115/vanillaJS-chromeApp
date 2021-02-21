@@ -1,22 +1,22 @@
 const body = document.querySelector("body");
-const IMG_NUMBER =3;
+const IMG_NUMBER = 3;
 
-
-function paintImage(imgNumber){
+function paintImage(imgNumber) {
   const image = new Image();
-  image.src = `/images/${imgNumber + 1}.jpg`;
+  //image.src = `/images/${imgNumber + 1}.jpg`;
+  image.src = `https://kgil0115.github.io/images/${imgNumber + 1}.jpg`;
   image.classList.add("bgImage");
   body.appendChild(image);
 
   //image.addEventListener("loaded", handleImgLoad);
 }
 
-function genRandom(){
+function genRandom() {
   const number = Math.floor(Math.random() * IMG_NUMBER);
   return number;
 }
 
-function init(){
+function init() {
   const randomNumber = genRandom();
   paintImage(randomNumber);
 }
